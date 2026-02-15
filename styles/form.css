@@ -1,0 +1,123 @@
+.form {
+    height: clamp(400px, 39vw, 748px);
+    padding-inline: 134px;
+    background-color: var(--color-grey);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.form__field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 13px;
+    margin-bottom: 13px;
+}
+
+.form__name {
+    font-size: clamp(10px, 0.8vw,15px);
+    font-weight: 800;
+    color: var(--color-dark);
+}
+
+.form__label {
+    width: 100%;
+}
+
+.form__label input {
+    width: 100%;
+    height: 70px;
+    padding-inline: 32px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--color-grey-10);
+}
+
+.form__checkbox {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    padding-block: 5px;
+    margin-bottom: 29px;
+}
+
+.form__checkbox p {
+    font-size: 10px;
+    font-weight: 400;
+    padding-right: 120px;
+}
+
+/* .form__checkbox input {
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    border-radius: none;
+} */
+
+.form__checkbox-input {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    margin: 0;
+    border-radius: 50%;
+}
+
+.form__button {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form__button-name {
+    position: relative;
+}
+
+.form__button svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -50px;
+    margin-left: 38px;
+}
+
+@media(max-width: 1440px) {
+    .form {
+        padding-inline: 80px;
+    }
+
+    .form__label input {
+        height: 60px;
+    }
+    
+    .form__checkbox p {
+        padding-right: 60px;
+        font-size: 9px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .form {
+        padding-inline: 60px;
+        width: 100%;
+    }
+
+    .form__label input {
+        height: 40px;
+    }
+
+    .form__checkbox p {
+        padding-right: 0;
+        font-size: 7px;
+    }
+}
+
+@media(max-width: 460px) {
+    .form {
+        padding-inline: 20px;
+    }
+}

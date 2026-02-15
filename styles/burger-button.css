@@ -1,0 +1,30 @@
+.burger-button {
+    width: 35px;
+    height: 35px;
+    background-color: var(--color-accent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6px;
+    padding-inline: 5px;
+    padding-block: 7px;
+    z-index: 10;
+}
+
+.burger-button.is-active {
+    position: fixed;
+    right: 15px;
+}
+
+.burger-bytton__line {
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-white);
+}
+
+@media(min-width: 769px) {
+    .burger-button {
+        display: none;
+    }
+}

@@ -1,0 +1,46 @@
+.logo {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.logo__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    padding-inline: 33.5px;
+    padding-block: 10px;
+    border-radius: 6px;
+    font-family: 'Inter';
+    font-size: 10.3px;
+    line-height: 12px;
+}
+
+.logo__info {
+    font-family: 'Manrope';
+    font-weight: 800;
+    font-size: 10px;
+    color: var(--color-dark);
+}
+
+@media(max-width: 1440px) {
+    .logo {
+        column-gap: 3px;
+    }
+
+    .logo__box {
+        padding-block: 6px;
+        padding-inline: 19px;
+        font-size: 8px;
+    }
+
+    .logo svg {
+        height: 25px;
+    } 
+
+    .logo__info {
+        font-size: 8px;
+    }
+}

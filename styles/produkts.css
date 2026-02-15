@@ -1,0 +1,126 @@
+.produkts {
+    background-color: var(--color-grey);
+    padding-bottom: 135px;
+    z-index: -1;
+}
+
+.produkts__header {
+    padding-bottom: 0;
+}
+
+.produkts__main {
+    column-gap: 21px;
+    display: grid;
+    grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+}
+
+.produkts__deskription {
+    margin-top: 75px;
+    font-size: clamp(20px, 2.08vw, 40px);
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.produkts__slaider {
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    row-gap: 30px;
+}
+
+.produkts__slaider::-webkit-scrollbar {
+    display: none;
+}
+
+.produkts__buttons {
+    width: calc(50% - 20px);
+    display: flex;
+    column-gap: 10px;
+}
+
+.produkts__button {
+    width: 100%;
+}
+
+.produkts__slaider-main {
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.produkts__list {
+    display: flex;
+    column-gap: 20px;
+}
+
+.produkts__slaider-main::-webkit-scrollbar {
+    display: none;
+}
+
+.prodakts__item {
+    width: 50%;
+    height: clamp(300px, 31.09vw, 597px);
+    flex-shrink: 0;
+    padding: clamp(15px, 1.5vw, 30px);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.prodakts__item-name {
+    color: transparent;
+    font-size: clamp(10px, 0.8vw,15px);
+    font-weight: 800;
+}
+
+.prodakts__item-name.is-active {
+    color: var(--color-dark-10);
+}
+
+.prodakts__item-bg-1 {
+    background-image: url(../images/produkts-item-bg-1.jpg);
+}
+
+.prodakts__item-bg-2 {
+    background-image: url(../images/produkts-item-bg-2.jpg);
+}
+
+@media(max-width: 1440px) {
+    .produkts {
+        padding-bottom: 100px;
+    }
+
+    .produkts__header {
+        padding-top: 40px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .produkts__header {
+        padding-top: 30px;
+    }
+}
+
+@media(max-width: 768px) {
+    .produkts__main {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .produkts__deskription {
+        margin-top: 10px;
+    }
+}
+
+@media(max-width: 460px) {
+    .produkts__buttons {
+        width: 100%;
+        display: flex;
+        column-gap: 10px;
+    }
+}
