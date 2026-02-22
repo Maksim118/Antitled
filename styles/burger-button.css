@@ -10,6 +10,8 @@
     padding-inline: 5px;
     padding-block: 7px;
     z-index: 10;
+    border: none;
+    position: relative;
 }
 
 .burger-button.is-active {
@@ -21,6 +23,25 @@
     height: 2px;
     width: 100%;
     background-color: var(--color-white);
+    transition-duration: 0.3s;
+}
+
+.burger-button.is-active .burger-bytton__line:nth-child(1) {
+    rotate: 45deg;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.burger-button.is-active .burger-bytton__line:nth-child(3) {
+    rotate: -45deg;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.burger-button.is-active .burger-bytton__line:nth-child(2) {
+    display: none;
 }
 
 @media(min-width: 769px) {

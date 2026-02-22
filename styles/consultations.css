@@ -23,6 +23,21 @@
     padding-right: 200px;
 }
 
+.consultation__form-home {
+    height: clamp(400px, 39vw, 748px);
+}
+
+.consultation-services {
+    padding-bottom: 20px;
+}
+
+.consultation__plit {
+    color: var(--color-white);
+    padding-left: clamp(30px, 6.51vw, 125px);
+    padding-block: clamp(30px, 7.81vw, 150px);
+    padding-right: 10px;
+}
+
 @media(max-width: 1440px) {
     .consultation {
         border-radius: 0 0 50px 50px;

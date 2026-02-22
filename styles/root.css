@@ -1,12 +1,17 @@
 :root {
     --color-white: #FFFFFF;
     --color-white-10: #F4F5F5;
+    --color-white-20: #DFDFDF;
     --color-accent: #041B4E;
     --color-dark: #1C1C1C;
     --color-dark-10: #111111 ;
     --color-blue: #33456E;
     --color-grey: #F3F4FB;
     --color-grey-10:#EDF3FC;
+    --color-grey-20:#EBEDFF;
+    --gradient-blue: linear-gradient(#041B4E, #093EB4);
 
     --border: 1px solid var(--color-blue);
+    --border-white: 1px solid var(--color-white);
+    --border-blue: 0.5px solid #093EB4;
 }

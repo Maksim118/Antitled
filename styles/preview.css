@@ -47,6 +47,10 @@
 }
 
 @media(max-width: 1024px) {
+    .preview {
+        display: flex;
+    }
+
     .preview__content {
         width: 60%;
     }

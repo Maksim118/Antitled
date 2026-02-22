@@ -1,0 +1,123 @@
+.prices__table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.prices__table-title {
+    border-radius: 20px;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    font-size: clamp(12px, 1.5vw, 30px);
+    font-weight: 800;
+}
+
+.prices__table-title:nth-child(odd) {
+    height: 82px;
+    padding-inline: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.prices__table-tr {
+    height: 82px;
+}
+
+.prices__table-item {
+    border-radius: 20px;
+}
+
+.prices__table-item:nth-child(odd) {
+    width: 100%;
+    font-size: clamp(12px, 1.042vw, 20px);
+    font-weight: 800;
+    padding-inline: 30px;
+}
+
+.prices__table-item:nth-child(even) {
+    width: 450px;
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(15px, 1.5vw, 30px);
+    font-weight: 800;
+}
+
+.prices__table-tr:nth-child(even) .prices__table-item {
+    background-color: var(--color-grey-20);
+}
+
+.prices__table-tr:nth-child(odd) .prices__table-item {
+    background-color: var(--color-grey);
+}
+
+.prices__table-title-light {
+    color: black;
+    background-color: var(--color-white);
+    border: var(--border-blue);
+}
+
+@media(max-width: 1024px) {
+    .prices__table-item:nth-child(even) {
+        width: 200px;
+    }
+
+    .prices__table-title:nth-child(odd) {
+        height: 50px;
+    }
+
+    .prices__table-item:nth-child(even) {
+        height: 50px;
+    }
+
+    .prices__table-tr {
+        height: 50px;
+    }
+}
+
+@media(max-width: 768px) {
+    .prices__table-item:nth-child(even) {
+        width: 120px;
+    }
+
+    .prices__table-title:nth-child(odd) {
+        height: 65px;
+    }
+
+    .prices__table-item:nth-child(even) {
+        height: 65px;
+    }
+
+    .prices__table-tr {
+        height: 65px;
+    }
+}
+
+@media(max-width: 460px) {
+    .prices__table-title {
+        /* font-size: clamp(10px, 1.5vw, 30px); */
+        padding-inline: 10px;
+    }
+
+    .prices__table-title:nth-child(odd) {
+        padding-inline: 10px;
+        height: 50px;
+    }
+
+    .prices__table-item:nth-child(odd) {
+        font-size: clamp(10px, 1.042vw, 20px);
+        padding-inline: 10px;
+    }
+
+    .prices__table-item:nth-child(even) {
+        width: 100px;
+        height: 50px;
+        font-size: clamp(12px, 1.5vw, 30px);
+    }
+
+    .prices__table-tr {
+        height: 50px;
+    }
+}

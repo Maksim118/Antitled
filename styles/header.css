@@ -5,6 +5,8 @@
     justify-content: start;
     column-gap: 50px;
     width: 100%;
+    background-color: var(--color-white);
+    border-bottom: 0.5px solid var(--color-accent);
 }
 
 .header a {
@@ -19,26 +21,32 @@
 
 .header__menu-sublist {
     position: absolute;
-    top: 35px;
+    top: 45px;
+    left: -10px;
     display: flex;
     flex-direction: column;
-    row-gap: 5px;
-}
-
-.header__menu-sublist {
-    display: none;
+    row-gap: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 0.3s;
+    margin-inline: 5px;
+    background-color: var(--color-grey);
+    border-radius: 5px;
 }
 
 .header__menu-sublist-mobail {
     display: flex;
     row-gap: 15px;
+    flex-direction: column;
 }
 
 .header__menu-sublist.is-active {
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 .header__menu-subitem {
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     row-gap: 15px;
@@ -50,12 +58,23 @@
     font-size: 20px;
 }
 
+.header__menu-sublink:hover {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border-radius: 5px;
+}
+
 .header__menu-link {
     color: var(--color-accent);
 }
 
 .header__menu-sublink {
+    padding-block: 5px;
     color: var(--color-accent);
+    flex-shrink: 0;
+    width: max-content;
+    padding-inline: 5px;
+    transition-duration: 0.2s;
 }
 
 .header__menu-dropdown {
@@ -63,6 +82,15 @@
     align-items: center;
     column-gap: 15px;
     position: relative;
+    cursor:pointer;
+}
+
+.header__menu-dropdown svg {
+    transition-duration: 0.2s;
+}
+
+.header__menu-dropdown.is-active.header__menu-dropdown svg {
+    rotate: -180deg;
 }
 
 .header__conect {
@@ -153,9 +181,17 @@
     .header__menu-item, .header__menu-link, .header__menu-subitem{
         font-size: 12px;
     }
+
+    .header__menu-sublist {
+        top: 35px;
+    }
 }
 
 @media(max-width: 768px) {
+    .header {
+        height: 55px;
+    }
+
     .header__conect-tel-desktop {
         display: none;
     }
@@ -180,6 +216,7 @@
         padding-inline: 20px;
         padding-top: 30px;
         width: 70%;
+        height: 100%;
         background-color: var(--color-accent);
         display: flex;
         flex-direction: column;

@@ -1,0 +1,147 @@
+.about {
+    padding-block: 20px;
+    background-color: var(--color-white);
+}
+
+.about__content {
+    padding-block: 40px;
+    padding-left: clamp(30px, 8.18vw, 157px);
+    padding-right: clamp(30px, 9.219vw, 177px);
+    display: flex;
+    flex-direction: column;
+}
+
+.about__deskription {
+    color: var(--color-white);
+    font-size: clamp(12px, 1.042vw, 20px);
+    line-height: 135%;
+    margin-bottom: 10px;
+}
+
+.about__title {
+    color: var(--color-white);
+    font-size: clamp(20px, 3.125vw, 60px);
+    line-height: 90%;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.about__points {
+    display: flex;
+    column-gap: 30px;
+    margin-bottom: 50px;
+}
+
+.about__point {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    color: var(--color-white);
+    font-size: clamp(12px, 1.042vw, 20px);
+    font-weight: 500;
+}
+
+.about__point-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-white-20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about__buttons {
+    width: 100%;
+    display: flex;
+    column-gap: 20px;
+}
+
+.about__image img {
+    width: 100%;
+}
+
+@media(max-width: 1440px) {
+    .about__content {
+        padding-inline: 40px;
+        border-radius: 15px;
+    }
+
+    .about__image {
+        border-radius: 15px;
+    }
+
+    .about__title {
+        margin-bottom: 20px;
+    }
+
+    .about__points {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .about {
+        display: flex;
+    }
+
+    .about__plit {
+        width: 50%;
+        border-radius: 10px;
+    }
+
+    .about__points {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .about__image {
+        width: 50%;
+    }
+
+    .about__image img {
+        object-fit: cover;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .about__buttons {
+        column-gap: 10px;
+    }
+}
+
+@media(max-width: 768px) {
+    .about {
+        position: relative;
+        padding: 0;
+        height: 70vh;
+        background-image: url(../images/about__bacraund-mb.jpg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+    }
+
+    .about__image {
+       display: none;
+    }
+
+    .about__plit {
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media(max-width: 460px) {
+    .about__plit {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .about__buttons {
+        column-gap: 5px;
+    }
+}

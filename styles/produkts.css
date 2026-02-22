@@ -41,16 +41,23 @@
 
 .produkts__button {
     width: 100%;
+    border: none;
+}
+
+.produkts__button:hover {
+    background-color:  var(--color-dark-10);
+    border: none;
 }
 
 .produkts__slaider-main {
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 .produkts__list {
     display: flex;
     column-gap: 20px;
+    transition-duration: 0.3s;
 }
 
 .produkts__slaider-main::-webkit-scrollbar {
@@ -58,7 +65,7 @@
 }
 
 .prodakts__item {
-    width: 50%;
+    width: calc(50% - 10px);
     height: clamp(300px, 31.09vw, 597px);
     flex-shrink: 0;
     padding: clamp(15px, 1.5vw, 30px);
@@ -75,9 +82,10 @@
     color: transparent;
     font-size: clamp(10px, 0.8vw,15px);
     font-weight: 800;
+    transition-duration: 0.2s;
 }
 
-.prodakts__item-name.is-active {
+.prodakts__item.is-active .prodakts__item-name {
     color: var(--color-dark-10);
 }
 

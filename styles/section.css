@@ -15,6 +15,10 @@
     row-gap: 10px;
 }
 
+.section__titles .section__deskription {
+    margin-top: 10px;
+}
+
 .section__title {
     font-weight: 600;
     font-size: clamp(15px, 1.5vw, 30px);
@@ -38,13 +42,12 @@
 .section__main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
+    gap: 20px;
 }
-
 
 @media(max-width: 1024px) {
     .section__main {
-        display: flex;
+        /* display: flex; */
     }
 }
 

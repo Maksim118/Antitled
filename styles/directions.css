@@ -36,6 +36,24 @@
     display: flex;
     align-items: center;
     column-gap: 2px;
+    text-decoration: none;
+}
+
+.directions__link:hover .directions__link-info {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+.directions__link:hover .directions__link-arrow {
+    background-color: var(--color-accent);
+}
+
+.directions__link-svg path {
+    transition-duration: 0.2s;
+}
+
+.directions__link:hover .directions__link-svg path {
+    fill: var(--color-white);
 }
 
 .directions__link-arrow {
@@ -46,6 +64,7 @@
     width: 30px;
     border: var(--border);
     border-radius: 4px;
+    transition-duration: 0.2s;
 }
 
 .directions__link-info {
@@ -56,9 +75,9 @@
     line-height: 100%;
     display: flex;
     align-items: center;
-    text-decoration: none;
     font-size: clamp(10px, 0.78vw, 15px);
     font-weight: 600;
+    transition-duration: 0.2s;
 }
 
 .directions__item-title {

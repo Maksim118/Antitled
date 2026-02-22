@@ -1,0 +1,7 @@
+.plit {
+    border-radius: 20px;
+    background: var(--gradient-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
