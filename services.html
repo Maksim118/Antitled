@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antitled | Services</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/root.css">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/utils.css">
+    <link rel="stylesheet" href="./styles/section.css">
+    <link rel="stylesheet" href="./styles/button.css">
+    <link rel="stylesheet" href="./styles/burger-button.css">
+    <link rel="stylesheet" href="./styles/logo.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/form.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+    <link rel="stylesheet" href="./styles/about.css">
+    <link rel="stylesheet" href="./styles/clients.css">
+    <link rel="stylesheet" href="./styles/prices.css">
+    <link rel="stylesheet" href="./styles/block.css">
+    <link rel="stylesheet" href="./styles/plit.css">
+    <link rel="stylesheet" href="./styles/consultations.css">
+    <link rel="stylesheet" href="./styles/questions.css">
+</head>
+<body>
+    <header class="header container">
+        <a href="/" class="logo header__logo">
+            <span class="logo__box">
+                LOGO    
+            </span>
+            <svg width="2" height="40" viewBox="0 0 2 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 0H0V40H2V0Z" fill="#041B4E"/>
+            </svg>
+            <span class="logo__info">
+                IT-услуги для бизнеса <br>и частных клиентов
+            </span>
+        </a>
+        <nav class="header__menu ">
+            <ul class="header__menu-list">
+                <li class="header__menu-item">
+                    <a href="/" class="header__menu-link">
+                        Главная
+                    </a>
+                </li>
+                <li class="header__menu-item header__menu-dropdown " data-js-dropdown-button>
+                    Услуги
+                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.899414 0.899647L5.69754 5.69777L10.4957 0.899647" stroke="#041B4E" stroke-width="1.7993" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <ul class="header__menu-sublist" data-js-dropdown-menu>
+                        <li class="header__menu-subitem">
+                            <a href="./services.html" class="header__menu-sublink">
+                                Установка систем видеонаблюдения
+                            </a>
+                        </li>
+                        <li class="header__menu-subitem">
+                            <a href="/" class="header__menu-sublink">
+                                Монтаж видеонаблюдения
+                            </a>
+                        </li>
+                        <li class="header__menu-subitem">
+                            <a href="/" class="header__menu-sublink">
+                                Комплексное IT-обслуживание и инженерные решения
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <nav class="header__menu-mobail" data-js-burger-menu >
+            <ul class="header__menu-list">
+                <li class="header__menu-item">
+                    <a href="/" class="header__menu-link">
+                        Главная
+                    </a>
+                </li>
+                <li class="header__menu-item header__menu-dropdown is-active" >
+                    <span class="header__menu-item">
+                        Услуги
+                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.899414 0.899647L5.69754 5.69777L10.4957 0.899647" stroke="#041B4E" stroke-width="1.7993" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <ul class=" header__menu-sublist-mobail" >
+                        <li class="header__menu-subitem">
+                            <a href="/" class="header__menu-sublink">
+                                Установка систем видеонаблюдения
+                            </a>
+                        </li>
+                        <li class="header__menu-subitem">
+                            <a href="/" class="header__menu-sublink">
+                                Монтаж видеонаблюдения
+                            </a>
+                        </li>
+                        <li class="header__menu-subitem">
+                            <a href="/" class="header__menu-sublink">
+                                Комплексное IT-обслуживание и инженерные решения
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="tel:+7(900)-228-78-87" class="header__conect-tel">+7(900)-228-78-87</a>
+            <a href="mailto:info@info.ru" class="header__conect-mail">
+                <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.8624 15.9968L14.778 9.59807M8.68401 9.59807L1.59968 15.9968M1.06641 4.26583L9.77403 10.3611C10.479 10.8546 10.8316 11.1015 11.215 11.197C11.5538 11.2814 11.9082 11.2814 12.2468 11.197C12.6304 11.1015 12.9828 10.8546 13.688 10.3611L22.3956 4.26583M6.18545 18.1297H17.2766C19.0684 18.1297 19.9644 18.1297 20.6487 17.7809C21.2507 17.4743 21.7402 16.9848 22.0468 16.3828C22.3956 15.6985 22.3956 14.8025 22.3956 13.0107V6.18546C22.3956 4.39365 22.3956 3.49766 22.0468 2.81331C21.7402 2.21135 21.2507 1.72185 20.6487 1.41519C19.9644 1.06646 19.0684 1.06646 17.2766 1.06646H6.18545C4.39364 1.06646 3.49766 1.06646 2.81331 1.41519C2.21135 1.72185 1.72186 2.21135 1.41512 2.81331C1.06641 3.49766 1.06641 4.39365 1.06641 6.18546V13.0107C1.06641 14.8025 1.06641 15.6985 1.41512 16.3828C1.72186 16.9848 2.21135 17.4743 2.81331 17.7809C3.49766 18.1297 4.39364 18.1297 6.18545 18.1297Z" stroke="#041B4E" stroke-width="2.13291" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </nav>
+        <div class="header__conect">
+            <a href="tel:+7(900)-228-78-87" class="header__conect-tel header__conect-mail-desktop">+7(900)-228-78-87</a>
+            <a href="mailto:info@info.ru" class="header__conect-mail header__conect-mail-desktop">
+                <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.8624 15.9968L14.778 9.59807M8.68401 9.59807L1.59968 15.9968M1.06641 4.26583L9.77403 10.3611C10.479 10.8546 10.8316 11.1015 11.215 11.197C11.5538 11.2814 11.9082 11.2814 12.2468 11.197C12.6304 11.1015 12.9828 10.8546 13.688 10.3611L22.3956 4.26583M6.18545 18.1297H17.2766C19.0684 18.1297 19.9644 18.1297 20.6487 17.7809C21.2507 17.4743 21.7402 16.9848 22.0468 16.3828C22.3956 15.6985 22.3956 14.8025 22.3956 13.0107V6.18546C22.3956 4.39365 22.3956 3.49766 22.0468 2.81331C21.7402 2.21135 21.2507 1.72185 20.6487 1.41519C19.9644 1.06646 19.0684 1.06646 17.2766 1.06646H6.18545C4.39364 1.06646 3.49766 1.06646 2.81331 1.41519C2.21135 1.72185 1.72186 2.21135 1.41512 2.81331C1.06641 3.49766 1.06641 4.39365 1.06641 6.18546V13.0107C1.06641 14.8025 1.06641 15.6985 1.41512 16.3828C1.72186 16.9848 2.21135 17.4743 2.81331 17.7809C3.49766 18.1297 4.39364 18.1297 6.18545 18.1297Z" stroke="#041B4E" stroke-width="2.13291" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <a href="#form" class="button header__conect-button">Получить консультацию</a>
+        </div>
+        <button class="burger-button" data-js-burger-button >
+            <span class="burger-bytton__line"></span>
+            <span class="burger-bytton__line"></span>
+            <span class="burger-bytton__line"></span>
+        </button>
+    </header>
+    <main>
+        <section class="section__main about container">
+            <div class="plit about__plit">
+                <div class="about__content">
+                    <span class="about__deskription">Проектирование, установка и обслуживание систем видеонаблюдения.</span>
+                    <h1 class="about__title">Установка систем видеонаблюдения</h1>
+                    <div class="about__points">
+                        <div class="about__point">
+                            <span class="about__point-icon">
+                                <svg width="17" height="25" viewBox="0 0 17 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.46154 0C3.78835 0 0 3.78835 0 8.46154C0 16.9231 8.46154 24.1758 8.46154 24.1758C8.46154 24.1758 16.9231 16.9231 16.9231 8.46154C16.9231 3.78835 13.1347 0 8.46154 0ZM8.46154 22.5198C6.43681 20.5295 1.20879 14.7781 1.20879 8.46154C1.20879 4.46225 4.46225 1.20879 8.46154 1.20879C12.4608 1.20879 15.7143 4.46225 15.7143 8.46154C15.7143 14.7787 10.4857 20.5301 8.46154 22.5198Z" fill="#041B4E"/>
+                                    <path d="M8.46172 9.67039C9.12932 9.67039 9.67051 9.1292 9.67051 8.4616C9.67051 7.794 9.12932 7.25281 8.46172 7.25281C7.79412 7.25281 7.25293 7.794 7.25293 8.4616C7.25293 9.1292 7.79412 9.67039 8.46172 9.67039Z" fill="#041B4E"/>
+                                </svg>
+                            </span>
+                            Под ключ <br>по Мособласти
+                        </div>
+                        <div class="about__point">
+                            <span class="about__point-icon">
+                                <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.77 14.7373C12.6485 14.7373 14.1709 13.2148 14.1709 11.3364C14.1709 9.45796 12.6485 7.93549 10.77 7.93549C8.89161 7.93549 7.36914 9.45796 7.36914 11.3364C7.36914 13.2148 8.89161 14.7373 10.77 14.7373ZM10.77 9.06912C12.0204 9.06912 13.0373 10.086 13.0373 11.3364C13.0373 12.5868 12.0204 13.6037 10.77 13.6037C9.51964 13.6037 8.50277 12.5868 8.50277 11.3364C8.50277 10.086 9.51964 9.06912 10.77 9.06912Z" fill="#071B49"/>
+                                    <path d="M2.10062 18.7203C3.44001 18.3887 4.82021 18.0157 5.81044 18.0157C6.19757 18.0157 6.52519 18.0729 6.76722 18.2113C7.60271 18.6902 8.0811 20.6304 8.60654 22.4635C9.30769 22.5967 10.0293 22.6727 10.7695 22.6727C11.5098 22.6727 12.2313 22.5967 12.9325 22.4641C13.4574 20.631 13.9363 18.6908 14.7712 18.2124C15.0133 18.0735 15.3409 18.0168 15.728 18.0168C16.7183 18.0168 18.099 18.3898 19.4378 18.7214C20.3476 17.6739 21.0618 16.4598 21.5385 15.1317C20.2098 13.768 18.7769 12.3594 18.7769 11.3375C18.7769 10.3149 20.2098 8.90696 21.5385 7.5432C21.0618 6.21514 20.3476 5.00102 19.4378 3.95355C18.0985 4.28513 16.7183 4.6581 15.728 4.6581C15.3409 4.6581 15.0133 4.60085 14.7712 4.46255C13.9358 3.98359 13.4574 2.04337 12.9319 0.210289C12.2313 0.0759533 11.5098 0 10.7695 0C10.0293 0 9.30769 0.0759534 8.60654 0.208589C8.08167 2.04167 7.60271 3.98189 6.76779 4.46028C6.52576 4.59915 6.19814 4.65583 5.811 4.65583C4.82077 4.65583 3.44001 4.28287 2.10062 3.95128C1.19088 4.99989 0.476693 6.21344 0 7.54206C1.32862 8.90582 2.76153 10.3138 2.76153 11.3363C2.76153 12.3589 1.32918 13.7668 0 15.1306C0.476693 16.4587 1.19088 17.6728 2.10062 18.7203ZM1.32465 7.27622C1.64433 6.54616 2.04621 5.85975 2.52573 5.22605C3.68544 5.51456 4.86102 5.78946 5.81044 5.78946C6.4277 5.78946 6.9248 5.6761 7.3312 5.44371C8.45407 4.7998 8.95173 3.1481 9.49928 1.21469C9.92893 1.16084 10.354 1.13363 10.7695 1.13363C11.185 1.13363 11.6101 1.16084 12.0397 1.21469C12.5873 3.14867 13.085 4.80037 14.2078 5.44427C14.6137 5.67723 15.1113 5.79003 15.7286 5.79003C16.678 5.79003 17.8536 5.51456 19.0133 5.22662C19.4928 5.86032 19.8947 6.54616 20.2144 7.27679C18.8552 8.67456 17.6444 10.0043 17.6444 11.3369C17.6444 12.6689 18.8557 13.9992 20.2144 15.397C19.8947 16.1276 19.4928 16.8135 19.0133 17.4472C17.8536 17.1587 16.678 16.8832 15.7286 16.8832C15.1113 16.8832 14.6142 16.9966 14.2078 17.229C13.085 17.8729 12.5873 19.5246 12.0397 21.4585C11.6101 21.5118 11.185 21.539 10.7695 21.539C10.354 21.539 9.92893 21.5118 9.49928 21.458C8.95173 19.524 8.4535 17.8723 7.3312 17.2284C6.92536 16.9954 6.4277 16.8826 5.81044 16.8826C4.86102 16.8826 3.68544 17.1581 2.52573 17.446C2.04621 16.8123 1.64433 16.1265 1.32465 15.3959C2.68388 13.9981 3.8946 12.6684 3.8946 11.3363C3.89516 10.0037 2.68388 8.67399 1.32465 7.27622Z" fill="#071B49"/>
+                                </svg>
+                            </span>
+                            Произведем монтаж <br>за 1 день
+                        </div>
+                    </div>
+                    <div class="about__buttons">
+                        <button class="button button-transparent">Подробнее</button>
+                        <button class="button button-light" data-js-modal-open >Оставить заявку</button>
+                    </div>
+                </div>
+            </div>
+            <div class="about__image">
+                <img src="./images/about__image.jpg" alt="">
+            </div>
+        </section>
+        <section class="container section clients">
+            <header class="clients__header section__header ">
+                <div class="section__titles">
+                    <h5 class=" section__title">Для кого услуга</h5>
+                    <span class=" section__deskription">Где мы выполняем видеонаблюдение</span>
+                </div>
+            </header>
+            <main class="section__main clients__main">
+                <div class="clients__card" style="background-image: url(./images/clients-card-1.jpg);">
+                    <span class="clients__card-name">Офисы и склады</span>
+                </div>
+                <div class="clients__card" style="background-image: url(./images/clients-card-2.jpg);">
+                    <span class="clients__card-name">Частные дома и квартиры</span>
+                </div>
+                <div class="clients__card" style="background-image: url(./images/clients-card-3.jpg);">
+                    <span class="clients__card-name">Заводы и банки</span>
+                </div>
+                <div class="clients__card" style="background-image: url(./images/clients-card-4.jpg);">
+                    <span class="clients__card-name">Гос. учереждения</span>
+                </div>
+            </main>
+        </section>
+        <section class="container section prices">
+            <header class=" prices__header section__header ">
+                <div class="section__titles">
+                    <h5 class=" section__title">Стоимость услуг</h5>
+                    <span class=" section__deskription">Цены на монтаж систем видеонаблюдения</span>
+                </div>
+            </header>
+            <main class="">
+                <table class="prices__table">
+                    <thead class="prices__table-head">
+                        <tr class="prices__table-tr">
+                            <th class="prices__table-title">НАИМЕНОВАНИЕ РАБОТ</th>
+                            <th class="prices__table-title">СТОИМОСТЬ (РУБЛЕЙ)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="prices__table-body">
+                        <tr class="prices__table-tr">
+                            <td class="prices__table-item">Установка, калибровка внутренней камеры (высота установки до 3 м)</td>
+                            <td class="prices__table-item">2700</td>
+                        </tr>
+                        <tr class="prices__table-tr">
+                            <td class="prices__table-item">Установка, калибровка уличной камеры (высота установки до 3 м)</td>
+                            <td class="prices__table-item">3500</td>
+                        </tr>
+                        <tr class="prices__table-tr">
+                            <td class="prices__table-item">Монтаж и настройка видеокамеры (Wi-Fi)</td>
+                            <td class="prices__table-item">2700</td>
+                        </tr>
+                        <tr class="prices__table-tr">
+                            <td class="prices__table-item">Монтаж кронштейна для уличной видеокамеры</td>
+                            <td class="prices__table-item">500</td>
+                        </tr>
+                        <tr class="prices__table-tr">
+                            <td class="prices__table-item">Установка микрофона</td>
+                            <td class="prices__table-item">400</td>
+                        </tr>
+                        <tr class="prices__table-tr">
+                            <td class="prices__table-item">Монтаж блока питания для камеры</td>
+                            <td class="prices__table-item">1200</td>
+                        </tr>
+                        <tr class="prices__table-tr">
+                            <td class="prices__table-item">Монтаж коммутатора</td>
+                            <td class="prices__table-item">500</td>
+                        </tr>
+                    </tbody>
+                </table>
+                    <span class="prices__table-head">
+                        <span class="prices__table-tr prices__table-tr-light">
+                            <span class="prices__table-title prices__table-title-light">УСТАНОВКА И НАСТРОЙКА</span>
+                        </span>
+                    </span>
+                <table class="prices__table">
+                    <tbody class="prices__table-body">
+                        <tr class="prices__table-tr">
+                            <td class="prices__table-item">4-х канального видеорегистратора</td>
+                            <td class="prices__table-item">2500</td>
+                        </tr>
+                        <tr class="prices__table-tr">
+                            <td class="prices__table-item">8-ми канального видеорегистратора</td>
+                            <td class="prices__table-item">3500</td>
+                        </tr>
+                        <tr class="prices__table-tr">
+                            <td class="prices__table-item">16-ти канального видеорегистратора</td>
+                            <td class="prices__table-item">4500</td>
+                        </tr>
+                        <tr class="prices__table-tr">
+                            <td class="prices__table-item">24-х канального видеорегистратора</td>
+                            <td class="prices__table-item">5500</td>
+                        </tr>
+                        <tr class="prices__table-tr">
+                            <td class="prices__table-item">32-х канального видеорегистратора</td>
+                            <td class="prices__table-item">6500</td>
+                        </tr>
+                        <tr class="prices__table-tr">
+                            <td class="prices__table-item">Установка, подключение и настройка видеорегистратора на базе ПК</td>
+                            <td class="prices__table-item">3000</td>
+                        </tr>
+                        <tr class="prices__table-tr">
+                            <td class="prices__table-item">Настройка удалённого доступа к архиву видеорегистратора с ПК или мобильного телефона</td>
+                            <td class="prices__table-item">1000</td>
+                        </tr>
+                        <tr class="prices__table-tr">
+                            <td class="prices__table-item">Видеосервера</td>
+                            <td class="prices__table-item">3000</td>
+                        </tr>
+                        <tr class="prices__table-tr">
+                            <td class="prices__table-item">Сборка и установка внутреннего телекоммуникационного шкафа</td>
+                            <td class="prices__table-item">3500</td>
+                        </tr>
+                        <tr class="prices__table-tr">
+                            <td class="prices__table-item">Сборка и установка настенного внутреннего телекоммуникационного шкафа</td>
+                            <td class="prices__table-item">3000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
+        </section>
+        <section class="container block possibilities">
+            <header class="block__header section__header ">
+                <div class="section__titles">
+                    <h5 class=" section__title">Что мы можем сделать</h5>
+                    <span class=" section__deskription">Возможности системы</span>
+                </div>
+            </header>
+            <main class="block__main">
+                <ul class="block__list">
+                    <li class="block__item " style="background-image: url(./images/posibilites-card-bg-1.jpg);">
+                        <div class="block__item-content">
+                            <h5 class="block__item-title">Full HD</h5>
+                            <p class="block__item-deskription">
+                                Максимальное разрешение камер позволяет разглядеть все в мельчайших деталях
+                            </p>
+                        </div>
+                    </li>
+                    <li class="block__item" style="background-image: url(./images/posibilites-card-bg-2.jpg);">
+                        <div class="block__item-content">
+                            <h5 class="block__item-title">Защита от снега и дождя</h5>
+                            <p class="block__item-deskription">
+                                    Камера ведет видеонаблюдение при любых погодных условиях
+                                </p>
+                            </div>
+                        </li>
+                        <li class="block__item" style="background-image: url(./images/posibilites-card-bg-3.jpg);">
+                            <div class="block__item-content">
+                                <h5 class="block__item-title">Ночная подсветка</h5>
+                                <p class="block__item-deskription">
+                                    Цветное изображения и днем, и ночью
+                                </p>
+                            </div>
+                        </li>
+                        <li class="block__item" style="background-image: url(./images/posibilites-card-bg-4.jpg);">
+                            <div class="block__item-content">
+                                <h5 class="block__item-title">Удобство использования</h5>
+                                <p class="block__item-deskription">
+                                    Доступ к архиву и видео в режиме online в любое время
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </main>
+        </section>  
+        <section class="section container consultation consultation-services">
+            <header class="consultation__header section__header ">
+                <div class="section__titles">
+                    <h6 class=" section__title">Нужна консультация по IT-задачам?</h6>
+                </div>
+            </header>
+            <main class="section__main consultation__main">
+                <div class="plit consultation__plit">
+                    <div class="consultation__info">
+                        <h6 class="consultation__subtitle">Оставьте задачу и мы подберем оптимальное решение.</h6>
+                        <div class="consultation__deskription">
+                            <p>
+                                Мы детально разберём вашу задачу, изучим текущую инфраструктуру и ограничения,оценим риски и перспективы развития.
+                            </p>
+                            <p>
+                                На основе этого предложим техническое решение, которое действительно работает:без избыточных компонентов, с понятной архитектурой, прозрачными сроками и прогнозируемым результатом.
+                            </p>
+                            <p>
+                                Вы получите не набор технологий, а продуманную систему, адаптированную под ваш бизнес,масштабируемую и готовую к дальнейшему развитию.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <form action="https://formspree.io/f/mlgwlvzg" method="post" id="form" class="consultation__form form">
+                    <span class="form__field">
+                        <span class="form__name">Ваше имя</span>
+                        <label class="form__label">
+                            <input name="name" id="name" class="form__input" type="text" placeholder="Иван" required>
+                        </labek>
+                    </span>
+                    <span class="form__field">
+                        <span class="form__name">Ваш номер</span>
+                        <label class="form__label">
+                            <img class="form__tel-img" src="./icon/form-country.png" alt="country">
+                            <span class="form__tel-unikod">+7</span>
+                            <input name="tel" id="tel" class="form__input" type="text" placeholder="(000) 000-00-00" required>
+                        </label>
+                    </span>
+                    <span class="form__checkbox">
+                        <input name="checkbox" type="checkbox" class="form__checkbox-input" id="confid" required>
+                        <p>
+                            Я даю согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+                        </p>
+                    </span>
+                    <button class="button form__button">
+                        <span class="form__button-name">
+                            Оставить заявку
+                            <svg class="form__button-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.8535 0.499999C13.8535 0.223858 13.6297 2.30278e-07 13.3535 -5.70512e-07L8.85352 -1.70117e-07C8.57737 -3.38705e-07 8.35352 0.223857 8.35352 0.5C8.35352 0.776142 8.57737 1 8.85352 1L12.8535 1L12.8535 5C12.8535 5.27614 13.0774 5.5 13.3535 5.5C13.6297 5.5 13.8535 5.27614 13.8535 5L13.8535 0.499999ZM0.353516 13.5L0.707069 13.8536L13.7071 0.853553L13.3535 0.5L13 0.146446L-3.77595e-05 13.1464L0.353516 13.5Z" fill="white"/>
+                            </svg>
+                        </span>
+                    </button>
+                </form>
+            </main>
+        </section>
+        <section class="container block possibilities">
+            <header class="section__header ">
+                <div class="section__titles">
+                    <h5 class=" section__title">Как мы работаем</h5>
+                    <span class=" section__deskription">Мы выполняем полный комплекс работ по установке систем видеонаблюдения — от подбора оборудования до настройки и обслуживания.</span>
+                </div>
+            </header>
+            <main class="block__main">
+                <ul class="block__list">
+                    <li class="block__item block__item-big" style="background-image: url(./images/posibilites-card-bg-1.jpg);">
+                        <div class="block__item-content">
+                            <h5 class="block__item-title">Консудьтация</h5>
+                            <p class="block__item-deskription">
+                                Заполните форму на сайте. Наш менеджер перезвонит Вам через 10 минут и ответит на любые вопросы.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="block__item block__item-big" style="background-image: url(./images/posibilites-card-bg-2.jpg);">
+                        <div class="block__item-content">
+                            <h5 class="block__item-title">Выезд специалистов</h5>
+                            <p class="block__item-deskription">
+                                    Мастер приедет со всем необходимым оборудованием, согласует с Вами смету и приступит к выполнению работ.
+                                </p>
+                            </div>
+                    </li>
+                    <li class="block__item block__item-big" style="background-image: url(./images/posibilites-card-bg-3.jpg);">
+                            <div class="block__item-content">
+                                <h5 class="block__item-title">Выполнение работы и оплата</h5>
+                                <p class="block__item-deskription">
+                                    По факту выполнения работ производится оплата.Гарантия на оборудование и работу 2 года.
+                                </p>
+                            </div>
+                    </li>
+                </ul>
+            </main>
+        </section>
+        <section class="container questions">
+            <header class="questions__header section__header">
+                <div class="section__titles">
+                    <h5 class=" section__title">FAQ</h5>
+                    <span class=" section__deskription">Остались вопросы?</span>
+                </div>
+            </header>
+            <main class="questions__main">
+                <ul class="questions__list">
+                    <li class="questions__item" data-js-acardion >
+                        <div class="question__item-header">
+                            Сборка и установка настенного внутреннего телекоммуникационного шкафа
+                            <span class="questions__button" data-js-acardion-button >
+                                <span class="questions__button-line"></span>
+                                <span class="questions__button-line"></span>
+                            </span>
+                        </div>
+                        <div class="questions__item-main" data-js-acardion-main >
+                            <p>
+                                Мастер приедет со всем необходимым оборудованием, согласует с Вами смету и приступит к выполнению работ.Мастер приедет со всем необходимым оборудованием, согласует с Вами смету и приступит к выполнению работ.
+                                Мастер приедет со всем необходимым оборудованием, согласует с Вами смету и приступит к выполнению работ.Мастер приедет со всем необходимым оборудованием, согласует с Вами смету и приступит к выполнению работ.
+                                Мастер приедет со всем необходимым оборудованием, согласует с Вами смету и приступит к выполнению работ.Мастер приедет со всем необходимым оборудованием, согласует с Вами смету и приступит к выполнению работ.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="questions__item" data-js-acardion >
+                        <div class="question__item-header">
+                            Сборка и установка настенного внутреннего телекоммуникационного шкафа
+                            <span class="questions__button" data-js-acardion-button >
+                                <span class="questions__button-line"></span>
+                                <span class="questions__button-line"></span>
+                            </span>
+                        </div>
+                        <div class="questions__item-main" data-js-acardion-main >
+                            <p>
+                                Мастер приедет со всем необходимым оборудованием, согласует с Вами смету и приступит к выполнению работ.Мастер приедет со всем необходимым оборудованием, согласует с Вами смету и приступит к выполнению работ.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="questions__item" data-js-acardion >
+                        <div class="question__item-header">
+                            Сборка и установка настенного внутреннего телекоммуникационного шкафа
+                            <span class="questions__button" data-js-acardion-button >
+                                <span class="questions__button-line"></span>
+                                <span class="questions__button-line"></span>
+                            </span>
+                        </div>
+                        <div class="questions__item-main" data-js-acardion-main >
+                            <p>
+                                Мастер приедет со всем необходимым оборудованием, согласует с Вами смету и приступит к выполнению работ.Мастер приедет со всем необходимым оборудованием, согласует с Вами смету и приступит к выполнению работ.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="questions__item" data-js-acardion >
+                        <div class="question__item-header">
+                            Сборка и установка настенного внутреннего телекоммуникационного шкафа
+                            <span class="questions__button" data-js-acardion-button >
+                                <span class="questions__button-line"></span>
+                                <span class="questions__button-line"></span>
+                            </span>
+                        </div>
+                        <div class="questions__item-main" data-js-acardion-main >
+                            <p>
+                                Мастер приедет со всем необходимым оборудованием, согласует с Вами смету и приступит к выполнению работ.Мастер приедет со всем необходимым оборудованием, согласует с Вами смету и приступит к выполнению работ.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <form action="https://formspree.io/f/mlgwlvzg" method="post" class="questions__form plit" id="form">
+                    <h6 class="questions__form-title">
+                        Остались вопросы?
+                    </h6>
+                    <span class="questions__form-directions">Оставьте номер телефона, и мы вскоре с Вами свяжемся</span>
+                    <label class="form__label questions__label">
+                        <img class="form__tel-img" src="./icon/form-country.png" alt="country">
+                        <span class="form__tel-unikod">+7</span>
+                        <input name="tel" id="tel" class="form__input" type="text" placeholder="(000) 000-00-00" required>
+                    </label>
+                    <button class="button button-light">Оставить заявку</button>
+                </form>
+            </main>
+        </section>
+        <div class="modal__overlay" id="overlay" data-js-modal>
+            <div class="modal" >
+                <form action="https://formspree.io/f/mlgwlvzg" method="post" id="form" class="modal__form form">
+                        <span class="form__field">
+                            <span class="form__name">Ваше имя</span>
+                            <label class="form__label">
+                                <input name="name" id="name" class="form__input" type="text" placeholder="Иван" required>
+                            </labek>
+                        </span>
+                        <span class="form__field">
+                            <span class="form__name">Ваш номер</span>
+                            <label class="form__label">
+                                <img class="form__tel-img" src="./icon/form-country.png" alt="country">
+                                <span class="form__tel-unikod">+7</span>
+                                <input name="tel" id="tel" class="form__input" type="text" placeholder="(000) 000-00-00" required>
+                            </label>
+                        </span>
+                        <span class="form__checkbox">
+                            <input name="checkbox" type="checkbox" class="form__checkbox-input" id="confid" required>
+                            <p>
+                                Я даю согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+                            </p>
+                        </span>
+                        <button class="button form__button">
+                            <span class="form__button-name">
+                                Оставить заявку
+                                <svg class="form__button-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.8535 0.499999C13.8535 0.223858 13.6297 2.30278e-07 13.3535 -5.70512e-07L8.85352 -1.70117e-07C8.57737 -3.38705e-07 8.35352 0.223857 8.35352 0.5C8.35352 0.776142 8.57737 1 8.85352 1L12.8535 1L12.8535 5C12.8535 5.27614 13.0774 5.5 13.3535 5.5C13.6297 5.5 13.8535 5.27614 13.8535 5L13.8535 0.499999ZM0.353516 13.5L0.707069 13.8536L13.7071 0.853553L13.3535 0.5L13 0.146446L-3.77595e-05 13.1464L0.353516 13.5Z" fill="white"/>
+                                </svg>
+                            </span>
+                        </button>
+                </form>
+                <button class="modal__button" data-js-modal-button>
+                    <span class="modal__button-line"></span>
+                    <span class="modal__button-line"></span>
+                </button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer footer-services container">
+        <div class="footer__kompani">
+            <div class="logo footer__logo">
+                <span class="logo__box">
+                    LOGO
+                </span>
+                <svg width="2" height="40" viewBox="0 0 2 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 0H0V40H2V0Z" fill="#041B4E"/>
+                </svg>
+                <span class="logo__info">
+                    IT-услуги для бизнеса <br>и частных клиентов
+                </span>
+            </div>
+            <sapn class="footer__konfid">
+                <a href="/">Политика конфиденциальности</a>
+        </sapn>
+        <span class="footer__aria">© 2026 ООО «НАЗВАНИЕ КОМПАНИИ».</span>
+    </div>
+    <nav class="footer__navigation">
+        <span class="footer__navgation-name">Услуги</span>
+        <ul class="footer__navigation-list">
+            <li class="footer__navigation-item">
+                <a href="/" class="footer__navigation-link">Поставка IT-оборудования</a>
+            </li>
+            <li class="footer__navigation-item">
+                <a href="/" class="footer__navigation-link">Обслуживание IT-оборудования</a>
+            </li>
+            <li class="footer__navigation-item">
+                <a href="/" class="footer__navigation-link">Сборка компьютеров и серверов</a>
+            </li>
+            <li class="footer__navigation-item">
+                <a href="/" class="footer__navigation-link">Прокладка кабельных сетей</a>
+                </li>
+                <li class="footer__navigation-item">
+                    <a href="/" class="footer__navigation-link">Видеонаблюдение</a>
+                </li>
+                <li class="footer__navigation-item">
+                    <a href="/" class="footer__navigation-link">Мультимедиа</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="footer__contacts">
+            <a href="/" class="footer__contacts-link footer-services__contacts-link">
+                <span class="footer__contacts-icon">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.0742 13.4877C9.63256 12.046 8.4942 10.4159 7.65915 8.67668C7.58732 8.5271 7.55148 8.45224 7.52381 8.35769C7.42575 8.02127 7.49613 7.60822 7.70026 7.32331C7.75753 7.24316 7.82616 7.1747 7.96325 7.03744C8.3827 6.61799 8.59242 6.40827 8.72968 6.19743C9.24671 5.40205 9.24671 4.37678 8.72968 3.5814C8.59242 3.37056 8.3827 3.16083 7.96325 2.74139L7.72953 2.50751C7.09188 1.86986 6.77306 1.55119 6.43072 1.37794C5.74972 1.03352 4.94554 1.03352 4.26454 1.37794C3.92219 1.55119 3.60337 1.86986 2.96572 2.50751L2.77663 2.69675C2.14122 3.33216 1.82352 3.64987 1.58084 4.08179C1.31161 4.56107 1.11788 5.30558 1.11964 5.85541C1.12108 6.35084 1.21722 6.68934 1.40935 7.36666C2.44245 11.006 4.39139 14.4403 7.25649 17.3054C10.1216 20.1705 13.5559 22.1195 17.1952 23.1526C17.8724 23.3447 18.2111 23.4408 18.7065 23.4423C19.2563 23.4439 20.0007 23.2503 20.4801 22.9811C20.912 22.7384 21.2298 22.4207 21.8652 21.7853L22.0544 21.5962C22.6919 20.9585 23.0107 20.6397 23.184 20.2972C23.5284 19.6164 23.5284 18.8122 23.184 18.1312C23.0107 17.7889 22.6919 17.47 22.0544 16.8324L21.8205 16.5985C21.4011 16.1791 21.1914 15.9693 20.9805 15.8322C20.1851 15.3152 19.1599 15.3152 18.3645 15.8322C18.1536 15.9693 17.9439 16.1791 17.5243 16.5985C17.3872 16.7358 17.3186 16.8042 17.2384 16.8617C16.9537 17.0656 16.5406 17.1362 16.2042 17.0381C16.1095 17.0104 16.0348 16.9746 15.8852 16.9028C14.1459 16.0677 12.5159 14.9294 11.0742 13.4877Z" stroke="#1D3260" stroke-width="2.23961" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <div class="footer__contacts-rekvisits">
+                    <span class="footer__contacts-deskription">Телефон</span>
+                    <span class="footer__contacts-rekvisit">info@info.ru</span>
+                </div>
+            </a>
+            <a href="/" class="footer__contacts-link footer-services__contacts-link">
+                <span class="footer__contacts-icon">
+                    <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.8624 15.9968L14.778 9.59802M8.68401 9.59802L1.59968 15.9968M1.06641 4.26578L9.77403 10.3611C10.479 10.8546 10.8316 11.1014 11.215 11.1969C11.5538 11.2814 11.9082 11.2814 12.2468 11.1969C12.6304 11.1014 12.9828 10.8546 13.688 10.3611L22.3956 4.26578M6.18545 18.1296H17.2766C19.0684 18.1296 19.9644 18.1296 20.6487 17.7809C21.2507 17.4742 21.7402 16.9847 22.0468 16.3828C22.3956 15.6984 22.3956 14.8024 22.3956 13.0106V6.18541C22.3956 4.3936 22.3956 3.49761 22.0468 2.81326C21.7402 2.2113 21.2507 1.7218 20.6487 1.41514C19.9644 1.06641 19.0684 1.06641 17.2766 1.06641H6.18545C4.39364 1.06641 3.49766 1.06641 2.81331 1.41514C2.21135 1.7218 1.72186 2.2113 1.41512 2.81326C1.06641 3.49761 1.06641 4.3936 1.06641 6.18541V13.0106C1.06641 14.8024 1.06641 15.6984 1.41512 16.3828C1.72186 16.9847 2.21135 17.4742 2.81331 17.7809C3.49766 18.1296 4.39364 18.1296 6.18545 18.1296Z" stroke="#041B4E" stroke-width="2.13291" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <div class="footer__contacts-rekvisits">
+                    <span class="footer__contacts-deskription">Почта</span>
+                    <span class="footer__contacts-rekvisit">info@info.ru</span>
+                </div>
+            </a>
+        </div>
+    </footer>
+    <script type="module" src="./skripts/main.js"></script>
+</body>
+</html>

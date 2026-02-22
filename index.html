@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antitled</title>
+    <title>Antitled | Home</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/root.css">
@@ -17,18 +17,20 @@
     <link rel="stylesheet" href="./styles/preview.css">
     <link rel="stylesheet" href="./styles/why-us.css">
     <link rel="stylesheet" href="./styles/directions.css">
-    <link rel="stylesheet" href="./styles/process.css">
+    <link rel="stylesheet" href="./styles/block.css">
     <link rel="stylesheet" href="./styles/produkts.css">
+    <link rel="stylesheet" href="./styles/block.css">
     <link rel="stylesheet" href="./styles/partners.css">
     <link rel="stylesheet" href="./styles/consultations.css">
     <link rel="stylesheet" href="./styles/form.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/modal.css">
 </head>
 <body>
     <header class="header container">
-        <div class="logo header__logo">
+        <a href="/" class="logo header__logo">
             <span class="logo__box">
-                LOGO
+                LOGO    
             </span>
             <svg width="2" height="40" viewBox="0 0 2 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 0H0V40H2V0Z" fill="#041B4E"/>
@@ -36,7 +38,7 @@
             <span class="logo__info">
                 IT-услуги для бизнеса <br>и частных клиентов
             </span>
-        </div>
+        </a>
         <nav class="header__menu ">
             <ul class="header__menu-list">
                 <li class="header__menu-item">
@@ -51,7 +53,7 @@
                     </svg>
                     <ul class="header__menu-sublist" data-js-dropdown-menu>
                         <li class="header__menu-subitem">
-                            <a href="/" class="header__menu-sublink">
+                            <a href="./services.html" class="header__menu-sublink">
                                 Установка систем видеонаблюдения
                             </a>
                         </li>
@@ -76,16 +78,16 @@
                         Главная
                     </a>
                 </li>
-                <li class="header__menu-item header__menu-dropdown is-active" >
+                <li class="header__menu-item" >
                     <span class="header__menu-item">
                         Услуги
                         <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.899414 0.899647L5.69754 5.69777L10.4957 0.899647" stroke="#041B4E" stroke-width="1.7993" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </span>
-                    <ul class="header__menu-sublist header__menu-sublist-mobail" >
+                    <ul class=" header__menu-sublist-mobail" >
                         <li class="header__menu-subitem">
-                            <a href="/" class="header__menu-sublink">
+                            <a href="./services.html" class="header__menu-sublink">
                                 Установка систем видеонаблюдения
                             </a>
                         </li>
@@ -116,7 +118,7 @@
                     <path d="M21.8624 15.9968L14.778 9.59807M8.68401 9.59807L1.59968 15.9968M1.06641 4.26583L9.77403 10.3611C10.479 10.8546 10.8316 11.1015 11.215 11.197C11.5538 11.2814 11.9082 11.2814 12.2468 11.197C12.6304 11.1015 12.9828 10.8546 13.688 10.3611L22.3956 4.26583M6.18545 18.1297H17.2766C19.0684 18.1297 19.9644 18.1297 20.6487 17.7809C21.2507 17.4743 21.7402 16.9848 22.0468 16.3828C22.3956 15.6985 22.3956 14.8025 22.3956 13.0107V6.18546C22.3956 4.39365 22.3956 3.49766 22.0468 2.81331C21.7402 2.21135 21.2507 1.72185 20.6487 1.41519C19.9644 1.06646 19.0684 1.06646 17.2766 1.06646H6.18545C4.39364 1.06646 3.49766 1.06646 2.81331 1.41519C2.21135 1.72185 1.72186 2.21135 1.41512 2.81331C1.06641 3.49766 1.06641 4.39365 1.06641 6.18546V13.0107C1.06641 14.8025 1.06641 15.6985 1.41512 16.3828C1.72186 16.9848 2.21135 17.4743 2.81331 17.7809C3.49766 18.1297 4.39364 18.1297 6.18545 18.1297Z" stroke="#041B4E" stroke-width="2.13291" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </a>
-            <a href="/" class="button header__conect-button">Получить консультацию</a>
+            <a href="#form" class="button header__conect-button">Получить консультацию</a>
         </div>
         <button class="burger-button" data-js-burger-button >
             <span class="burger-bytton__line"></span>
@@ -132,12 +134,12 @@
                 </span>
                 <h1 class="preview__title">Комплексное IT-обслуживание и инженерные решения</h1>
                 <div class="preview__buttons">
-                    <a class="button preview__button">Оставить заявку
+                    <button class="button preview__button" data-js-modal-open>Оставить заявку
                         <svg class="preview__button-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.8535 0.499999C13.8535 0.223858 13.6297 2.30278e-07 13.3535 -5.70512e-07L8.85352 -1.70117e-07C8.57737 -3.38705e-07 8.35352 0.223857 8.35352 0.5C8.35352 0.776142 8.57737 1 8.85352 1L12.8535 1L12.8535 5C12.8535 5.27614 13.0774 5.5 13.3535 5.5C13.6297 5.5 13.8535 5.27614 13.8535 5L13.8535 0.499999ZM0.353516 13.5L0.707069 13.8536L13.7071 0.853553L13.3535 0.5L13 0.146446L-3.77595e-05 13.1464L0.353516 13.5Z" fill="white"/>
                         </svg>
-                    </a>
-                    <a class="button button-light preview__button">Получить консультацию
+                    </button>
+                    <a href="#form" class="button button-light preview__button">Получить консультацию
                         <svg class="preview__button-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.8535 0.499999C13.8535 0.223858 13.6297 2.30278e-07 13.3535 -5.70512e-07L8.85352 -1.70117e-07C8.57737 -3.38705e-07 8.35352 0.223857 8.35352 0.5C8.35352 0.776142 8.57737 1 8.85352 1L12.8535 1L12.8535 5C12.8535 5.27614 13.0774 5.5 13.3535 5.5C13.6297 5.5 13.8535 5.27614 13.8535 5L13.8535 0.499999ZM0.353516 13.5L0.707069 13.8536L13.7071 0.853553L13.3535 0.5L13 0.146446L-3.77595e-05 13.1464L0.353516 13.5Z" fill="#041B4E"/>
                         </svg>
@@ -231,7 +233,7 @@
                     <li class="directions__item directions__item-width directions__item-backraund-1">
                         <a href="/" class="directions__link ">
                             <span class="directions__link-arrow">
-                                <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="directions__link-svg" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.302 0.717421C12.284 0.303599 11.934 -0.017285 11.5202 0.000706719L4.77653 0.293908C4.36271 0.3119 4.04182 0.661955 4.05981 1.07578C4.07781 1.4896 4.42786 1.81048 4.84168 1.79249L10.836 1.53187L11.0966 7.52621C11.1146 7.94003 11.4647 8.26091 11.8785 8.24292C12.2923 8.22493 12.6132 7.87487 12.5952 7.46105L12.302 0.717421ZM0.552734 12.75L1.1056 13.2568L12.1056 1.25679L11.5527 0.749999L10.9999 0.243206L-0.00013122 12.2432L0.552734 12.75Z" fill="#33456E"/>
                                 </svg>
                             </span>
@@ -242,7 +244,7 @@
                     <li class="directions__item directions__item-backraund-2">
                         <a href="/" class="directions__link">
                             <span class="directions__link-arrow">
-                                <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="directions__link-svg" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.302 0.717421C12.284 0.303599 11.934 -0.017285 11.5202 0.000706719L4.77653 0.293908C4.36271 0.3119 4.04182 0.661955 4.05981 1.07578C4.07781 1.4896 4.42786 1.81048 4.84168 1.79249L10.836 1.53187L11.0966 7.52621C11.1146 7.94003 11.4647 8.26091 11.8785 8.24292C12.2923 8.22493 12.6132 7.87487 12.5952 7.46105L12.302 0.717421ZM0.552734 12.75L1.1056 13.2568L12.1056 1.25679L11.5527 0.749999L10.9999 0.243206L-0.00013122 12.2432L0.552734 12.75Z" fill="#33456E"/>
                                 </svg>
                             </span>
@@ -253,7 +255,7 @@
                     <li class="directions__item directions__item-backraund-3">
                         <a href="/" class="directions__link">
                             <span class="directions__link-arrow">
-                                <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="directions__link-svg" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.302 0.717421C12.284 0.303599 11.934 -0.017285 11.5202 0.000706719L4.77653 0.293908C4.36271 0.3119 4.04182 0.661955 4.05981 1.07578C4.07781 1.4896 4.42786 1.81048 4.84168 1.79249L10.836 1.53187L11.0966 7.52621C11.1146 7.94003 11.4647 8.26091 11.8785 8.24292C12.2923 8.22493 12.6132 7.87487 12.5952 7.46105L12.302 0.717421ZM0.552734 12.75L1.1056 13.2568L12.1056 1.25679L11.5527 0.749999L10.9999 0.243206L-0.00013122 12.2432L0.552734 12.75Z" fill="#33456E"/>
                                 </svg>
                             </span>
@@ -266,7 +268,7 @@
                     <li class="directions__item directions__item-backraund-4">
                         <a href="/" class="directions__link">
                             <span class="directions__link-arrow">
-                                <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="directions__link-svg" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.302 0.717421C12.284 0.303599 11.934 -0.017285 11.5202 0.000706719L4.77653 0.293908C4.36271 0.3119 4.04182 0.661955 4.05981 1.07578C4.07781 1.4896 4.42786 1.81048 4.84168 1.79249L10.836 1.53187L11.0966 7.52621C11.1146 7.94003 11.4647 8.26091 11.8785 8.24292C12.2923 8.22493 12.6132 7.87487 12.5952 7.46105L12.302 0.717421ZM0.552734 12.75L1.1056 13.2568L12.1056 1.25679L11.5527 0.749999L10.9999 0.243206L-0.00013122 12.2432L0.552734 12.75Z" fill="#33456E"/>
                                 </svg>
                             </span>
@@ -277,7 +279,7 @@
                     <li class="directions__item directions__item-width directions__item-backraund-5">
                         <a href="/" class="directions__link">
                             <span class="directions__link-arrow">
-                                <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="directions__link-svg" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.302 0.717421C12.284 0.303599 11.934 -0.017285 11.5202 0.000706719L4.77653 0.293908C4.36271 0.3119 4.04182 0.661955 4.05981 1.07578C4.07781 1.4896 4.42786 1.81048 4.84168 1.79249L10.836 1.53187L11.0966 7.52621C11.1146 7.94003 11.4647 8.26091 11.8785 8.24292C12.2923 8.22493 12.6132 7.87487 12.5952 7.46105L12.302 0.717421ZM0.552734 12.75L1.1056 13.2568L12.1056 1.25679L11.5527 0.749999L10.9999 0.243206L-0.00013122 12.2432L0.552734 12.75Z" fill="#33456E"/>
                                 </svg>
                             </span>
@@ -288,7 +290,7 @@
                     <li class="directions__item directions__item-backraund-6">
                         <a href="/" class="directions__link">
                             <span class="directions__link-arrow">
-                                <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="directions__link-svg" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.302 0.717421C12.284 0.303599 11.934 -0.017285 11.5202 0.000706719L4.77653 0.293908C4.36271 0.3119 4.04182 0.661955 4.05981 1.07578C4.07781 1.4896 4.42786 1.81048 4.84168 1.79249L10.836 1.53187L11.0966 7.52621C11.1146 7.94003 11.4647 8.26091 11.8785 8.24292C12.2923 8.22493 12.6132 7.87487 12.5952 7.46105L12.302 0.717421ZM0.552734 12.75L1.1056 13.2568L12.1056 1.25679L11.5527 0.749999L10.9999 0.243206L-0.00013122 12.2432L0.552734 12.75Z" fill="#33456E"/>
                                 </svg>
                             </span>
@@ -299,8 +301,8 @@
                 </ul>
             </main>
         </section>
-        <section class="process section container">
-            <header class="process__header section__header ">
+        <section class="block section container">
+            <header class="block__header section__header ">
                 <div class="section__titles">
                     <h4 class=" section__title">Как мы работаем</h4>
                     <span class=" section__subtitle">//НАШИ ПРОЦЕССЫ</span>
@@ -309,40 +311,40 @@
                     Понятный и прозрачный процесс работы на каждом этапе.
                 </span>
             </header>
-            <main class="process__main">
-                <ul class="process__list">
-                    <li class="process__item process__item-bg-1">
-                        <span class="process__item-number">1 этап</span>
-                        <div class="process__item-content">
-                        <h5 class="process__item-title">Анализ задачи</h5>
-                        <p class="process__item-deskription">
+            <main class="block__main">
+                <ul class="block__list">
+                    <li class="block__item" style="background-image: url(./images/process-item-bg-1.jpg);">
+                        <span class="block__item-number">1 этап</span>
+                        <div class="block__item-content">
+                        <h5 class="block__item-title">Анализ задачи</h5>
+                        <p class="block__item-deskription">
                             Изучаем требования, текущую инфраструктуру и цели проекта. Формируем понимание объёма и возможных ограничений.
                         </p>
                         </div>
                     </li>
-                    <li class="process__item process__item-bg-2">
-                        <span class="process__item-number">2 этап</span>
-                        <div class="process__item-content">
-                            <h5 class="process__item-title">Проектирование решения</h5>
-                            <p class="process__item-deskription">
+                    <li class="block__item" style="background-image: url(./images/process-item-bg-2.jpg);">
+                        <span class="block__item-number">2 этап</span>
+                        <div class="block__item-content">
+                            <h5 class="block__item-title">Проектирование решения</h5>
+                            <p class="block__item-deskription">
                                 Разрабатываем оптимальное техническое решение с учётом задач бизнеса, требований к безопасности и масштабируемости.
                             </p>
                         </div>
                     </li>
-                    <li class="process__item process__item-bg-3">
-                        <span class="process__item-number">3 этап</span>
-                        <div class="process__item-content">
-                        <h5 class="process__item-title">Реализация и монтаж</h5>
-                        <p class="process__item-deskription">
+                    <li class="block__item" style="background-image: url(./images/process-item-bg-3.jpg);">
+                        <span class="block__item-number">3 этап</span>
+                        <div class="block__item-content">
+                        <h5 class="block__item-title">Реализация и монтаж</h5>
+                        <p class="block__item-deskription">
                             Выполняем поставку оборудования, монтаж, настройку и внедрение решений в рабочей среде.
                         </p>
                         </div>
                     </li>
-                    <li class="process__item process__item-bg-4">
-                        <span class="process__item-number">4 этап</span>
-                        <div class="process__item-content">
-                        <h5 class="process__item-title">Тестирование и ввод в эксплуатацию</h5>
-                        <p class="process__item-deskription">
+                    <li class="block__item" style="background-image: url(./images/process-item-bg-4.jpg);">
+                        <span class="block__item-number">4 этап</span>
+                        <div class="block__item-content">
+                        <h5 class="block__item-title">Тестирование и ввод в эксплуатацию</h5>
+                        <p class="block__item-deskription">
                             Проверяем корректность работы систем, проводим пусконаладочные работы и передаём решение в эксплуатацию.
                         </p>
                         </div>
@@ -366,24 +368,42 @@
                 </div>
                 <div class="produkts__slaider">
                     <div class="produkts__buttons">
-                        <button class="button produkts__button">
+                        <button class="button produkts__button" data-js-produkts-button-left >
                             <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.292881 8.07112C-0.0976429 7.6806 -0.0976429 7.04743 0.292881 6.65691L6.65684 0.292946C7.04737 -0.0975785 7.68053 -0.0975785 8.07106 0.292946C8.46158 0.68347 8.46158 1.31664 8.07106 1.70716L2.4142 7.36401L8.07106 13.0209C8.46158 13.4114 8.46158 14.0446 8.07106 14.4351C7.68053 14.8256 7.04737 14.8256 6.65684 14.4351L0.292881 8.07112ZM19.3848 7.36401V8.36401L0.999989 8.36401V7.36401V6.36401L19.3848 6.36401V7.36401Z" fill="white"/>
                             </svg>
                         </button>
-                        <button class="button produkts__button">
+                        <button class="button produkts__button" data-js-produkts-button-right >
                             <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19.0919 8.07112C19.4824 7.6806 19.4824 7.04743 19.0919 6.65691L12.7279 0.292946C12.3374 -0.0975785 11.7042 -0.0975785 11.3137 0.292946C10.9232 0.68347 10.9232 1.31664 11.3137 1.70716L16.9706 7.36401L11.3137 13.0209C10.9232 13.4114 10.9232 14.0446 11.3137 14.4351C11.7042 14.8256 12.3374 14.8256 12.7279 14.4351L19.0919 8.07112ZM0 7.36401L0 8.36401L18.3848 8.36401V7.36401V6.36401L0 6.36401L0 7.36401Z" fill="white"/>
                             </svg>
                         </button>
                     </div>
-                    <div class="produkts__slaider-main">
+                    <div class="produkts__slaider-main " data-js-produkts-slaider>
                         <ul class="produkts__list">
                             <li class="prodakts__item prodakts__item-bg-1">
                                 <span class="prodakts__item-name">Комплексное видеонаблюдение</span>
                             </li>
+                            <li class="prodakts__item prodakts__item-bg-2 is-active">
+                                <span class="prodakts__item-name">Установка видеосистем</span>
+                            </li>
+                            <li class="prodakts__item prodakts__item-bg-1">
+                                <span class="prodakts__item-name">Комплексное видеонаблюдение</span>
+                            </li>
                             <li class="prodakts__item prodakts__item-bg-2">
-                                <span class="prodakts__item-name is-active">Установка видеосистем</span>
+                                <span class="prodakts__item-name">Установка видеосистем</span>
+                            </li>
+                            <li class="prodakts__item prodakts__item-bg-1">
+                                <span class="prodakts__item-name">Комплексное видеонаблюдение</span>
+                            </li>
+                            <li class="prodakts__item prodakts__item-bg-2">
+                                <span class="prodakts__item-name">Установка видеосистем</span>
+                            </li>
+                            <li class="prodakts__item prodakts__item-bg-1">
+                                <span class="prodakts__item-name">Комплексное видеонаблюдение</span>
+                            </li>
+                            <li class="prodakts__item prodakts__item-bg-2 is-active">
+                                <span class="prodakts__item-name">Установка видеосистем</span>
                             </li>
                             <li class="prodakts__item prodakts__item-bg-1">
                                 <span class="prodakts__item-name">Комплексное видеонаблюдение</span>
@@ -413,42 +433,42 @@
                 <ul class="partners__list">
                     <li class="partners__item">
                         <a href="/" class="partners__link">
-                            <img src="./images/partner logo.png" alt="partner">
+                            <img src="/images/partner logo.png" alt="partner">
                         </a>
                     </li>
                     <li class="partners__item">
                         <a href="/" class="partners__link">
-                            <img src="./images/partner logo.png" alt="partner">
+                            <img src="/images/partner logo.png" alt="partner">
                         </a>
                     </li>
                     <li class="partners__item">
                         <a href="/" class="partners__link">
-                            <img src="./images/partner logo.png" alt="partner">
+                            <img src="/images/partner logo.png" alt="partner">
                         </a>
                     </li>
                     <li class="partners__item">
                         <a href="/" class="partners__link">
-                            <img src="./images/partner logo.png" alt="partner">
+                            <img src="/images/partner logo.png" alt="partner">
                         </a>
                     </li>
                     <li class="partners__item">
                         <a href="/" class="partners__link">
-                            <img src="./images/partner logo.png" alt="partner">
+                            <img src="/images/partner logo.png" alt="partner">
                         </a>
                     </li>
                     <li class="partners__item">
                         <a href="/" class="partners__link">
-                            <img src="./images/partner logo.png" alt="partner">
+                            <img src="/images/partner logo.png" alt="partner">
                         </a>
                     </li>
                     <li class="partners__item">
                         <a href="/" class="partners__link">
-                            <img src="./images/partner logo.png" alt="partner">
+                            <img src="/images/partner logo.png" alt="partner">
                         </a>
                     </li>
                     <li class="partners__item">
                         <a href="/" class="partners__link">
-                            <img src="./images/partner logo.png" alt="partner">
+                            <img src="/images/partner logo.png" alt="partner">
                         </a>
                     </li>
                 </ul>
@@ -476,22 +496,23 @@
                         </p>
                     </div>
                 </div>
-                <form action="/" class="consultation__form form">
+                <form action="https://formspree.io/f/mlgwlvzg" method="post" id="form" class="consultation__form-home form">
                     <span class="form__field">
                         <span class="form__name">Ваше имя</span>
-                        <label for="" class="form__label">
-                            <input  name="name" id="name" class="form__input" type="text" placeholder="Иван">
-                        </label>
+                        <label class="form__label">
+                            <input name="name" id="name" class="form__input" type="text" placeholder="Иван" required>
+                        </labek>
                     </span>
                     <span class="form__field">
                         <span class="form__name">Ваш номер</span>
                         <label class="form__label">
-                            <input name="tel" id="tel" class="form__input" type="tel" placeholder="(000) 000-00-00">
+                            <img class="form__tel-img" src="./icon/form-country.png" alt="country">
+                            <span class="form__tel-unikod">+7</span>
+                            <input name="tel" id="tel" class="form__input" type="text" placeholder="(000) 000-00-00" required>
                         </label>
                     </span>
                     <span class="form__checkbox">
-                        <label for="" class="form__checkbox-label"></label>
-                        <input type="checkbox" class="form__checkbox-input">
+                        <input name="checkbox" type="checkbox" class="form__checkbox-input" id="confid" required>
                         <p>
                             Я даю согласие на обработку персональных данных в соответствии с политикой конфиденциальности
                         </p>
@@ -499,7 +520,7 @@
                     <button class="button form__button">
                         <span class="form__button-name">
                             Оставить заявку
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="form__button-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M13.8535 0.499999C13.8535 0.223858 13.6297 2.30278e-07 13.3535 -5.70512e-07L8.85352 -1.70117e-07C8.57737 -3.38705e-07 8.35352 0.223857 8.35352 0.5C8.35352 0.776142 8.57737 1 8.85352 1L12.8535 1L12.8535 5C12.8535 5.27614 13.0774 5.5 13.3535 5.5C13.6297 5.5 13.8535 5.27614 13.8535 5L13.8535 0.499999ZM0.353516 13.5L0.707069 13.8536L13.7071 0.853553L13.3535 0.5L13 0.146446L-3.77595e-05 13.1464L0.353516 13.5Z" fill="white"/>
                             </svg>
                         </span>
@@ -507,8 +528,46 @@
                 </form>
             </main>
         </section>
+        <div class="modal__overlay" id="overlay" data-js-modal>
+            <div class="modal" >
+                <form action="https://formspree.io/f/mlgwlvzg" method="post" id="form" class="modal__form form">
+                        <span class="form__field">
+                            <span class="form__name">Ваше имя</span>
+                            <label class="form__label">
+                                <input name="name" id="name" class="form__input" type="text" placeholder="Иван" required>
+                            </labek>
+                        </span>
+                        <span class="form__field">
+                            <span class="form__name">Ваш номер</span>
+                            <label class="form__label">
+                                <img class="form__tel-img" src="./icon/form-country.png" alt="country">
+                                <span class="form__tel-unikod">+7</span>
+                                <input name="tel" id="tel" class="form__input" type="text" placeholder="(000) 000-00-00" required>
+                            </label>
+                        </span>
+                        <span class="form__checkbox">
+                            <input name="checkbox" type="checkbox" class="form__checkbox-input" id="confid" required>
+                            <p>
+                                Я даю согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+                            </p>
+                        </span>
+                        <button class="button form__button">
+                            <span class="form__button-name">
+                                Оставить заявку
+                                <svg class="form__button-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.8535 0.499999C13.8535 0.223858 13.6297 2.30278e-07 13.3535 -5.70512e-07L8.85352 -1.70117e-07C8.57737 -3.38705e-07 8.35352 0.223857 8.35352 0.5C8.35352 0.776142 8.57737 1 8.85352 1L12.8535 1L12.8535 5C12.8535 5.27614 13.0774 5.5 13.3535 5.5C13.6297 5.5 13.8535 5.27614 13.8535 5L13.8535 0.499999ZM0.353516 13.5L0.707069 13.8536L13.7071 0.853553L13.3535 0.5L13 0.146446L-3.77595e-05 13.1464L0.353516 13.5Z" fill="white"/>
+                                </svg>
+                            </span>
+                        </button>
+                </form>
+                <button class="modal__button" data-js-modal-button>
+                    <span class="modal__button-line"></span>
+                    <span class="modal__button-line"></span>
+                </button>
+            </div>
+        </div>    
     </main>
-    <footer class="footer container">
+    <footer class="footer footer-home container">
         <div class="footer__kompani">
             <div class="logo footer__logo">
             <span class="logo__box">
@@ -574,8 +633,6 @@
             </a>
         </div>
     </footer>
-    <script src="./skripts/burgerButton.js"></script>
-    <script src="./skripts/headerDropdown.js"></script>
+    <script type="module" src="./skripts/main.js"></script>
 </body>
-
 </html>
